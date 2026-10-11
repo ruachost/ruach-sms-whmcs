@@ -1,0 +1,54 @@
+RUACH SMS FOR WHMCS - LICENCE AGREEMENT
+
+Copyright (c) 2026 Ruach Networks Infrastructure Limited (RC 8040000), Abuja, Nigeria.
+All rights reserved.
+
+By installing, copying or using this software ("the Module") you agree to these terms.
+
+1. Licence
+   Ruach Networks Infrastructure Limited ("Ruach") grants you a free, non-exclusive,
+   non-transferable, revocable licence to install and use the Module on WHMCS
+   installations that you own or operate, for the purpose of sending messages
+   through a Ruach SMS account.
+
+2. Restrictions
+   You may not:
+   a) sell, resell, sublicense, rent or distribute the Module, in original or
+      modified form, other than by pointing others to Ruach's official download;
+   b) modify the Module to send messages through any provider other than Ruach;
+   c) remove or alter copyright, licence or attribution notices.
+   You may modify the Module for your own internal use, subject to (b).
+
+3. Ruach SMS account
+   The Module requires a Ruach SMS account. Messaging is billed under your
+   account and governed by Ruach's terms of service. Ruach may change, suspend
+   or discontinue the messaging API, and the Module may stop working as a result.
+
+4. Data protection
+   The Module sends your clients' names, mobile numbers and billing details
+   (such as invoice numbers, amounts and due dates) to Ruach to deliver messages.
+   You are the data controller for this information and are responsible for
+   having a lawful basis to send these messages. Ruach processes it as your
+   processor under its Data Processing Agreement: https://ruachnet.com/dpa
+
+5. No warranty
+   THE MODULE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
+   PURPOSE AND NON-INFRINGEMENT. Test it, using the dry-run mode, before relying
+   on it in production.
+
+6. Limitation of liability
+   TO THE FULLEST EXTENT PERMITTED BY LAW, RUACH SHALL NOT BE LIABLE FOR ANY
+   INDIRECT, INCIDENTAL, SPECIAL OR CONSEQUENTIAL DAMAGES, OR FOR LOSS OF
+   PROFITS, REVENUE OR DATA, ARISING FROM USE OF THE MODULE. Ruach's total
+   liability under this licence shall not exceed NGN 50,000.
+
+7. Termination
+   This licence ends automatically if you breach it. On termination you must
+   stop using and delete the Module.
+
+8. Governing law
+   This licence is governed by the laws of the Federal Republic of Nigeria.
+   The courts of the Federal Capital Territory, Abuja have exclusive jurisdiction.
+
+Contact: support@ruachnet.com
