@@ -2,7 +2,7 @@
 
 Version 1.3.0 · Ruach Networks · https://ruachnet.com/whmcs-sms
 
-SMS notifications for WHMCS, sent over Ruach Networks' direct carrier routes. The module is free; you need a Ruach SMS account to send messages.
+SMS notifications for WHMCS, sent over Ruach Networks' direct carrier routes to mobile numbers in any country. The module is free; you need a Ruach SMS account to send messages.
 
 Full documentation: https://docs.ruachnet.com/whmcs-sms · Support: support@ruachnet.com
 
@@ -46,6 +46,7 @@ Full documentation: https://docs.ruachnet.com/whmcs-sms · Support: support@ruac
 - **Retries:** failed sends are retried up to 3 times within 2 days. Queued messages older than 2 days expire rather than arrive late.
 - **Delivery reports:** each sent message is checked for up to 3 days and shown as Delivered, Undelivered or Awaiting report.
 - **Logging:** every send, and every message that isn't delivered, is written to the WHMCS Activity Log and the client's log.
+- **Global delivery:** clients in any country can be texted. Use **Countries** to limit sending to the countries you choose, or leave it blank for all.
 - **Phone numbers:** formats such as `+234.803…`, `0803…`, `803…`, `+234 0803…` and `00234…` are converted to international format. Numbers that can't be resolved are logged as `skipped`.
 - **Message length:** amounts use currency codes (`NGN 25,000.00`), not symbols. A symbol such as ₦ forces Unicode and halves the characters per SMS. The template editor counts characters and SMS parts as you type.
 - **Opt-outs:** clients on the opt-out list receive nothing. Closed clients are always skipped.
