@@ -1,6 +1,6 @@
 # Ruach SMS for WHMCS
 
-Version 1.2.0 · Ruach Networks · https://ruachnet.com/whmcs-sms
+Version 1.3.0 · Ruach Networks · https://ruachnet.com/whmcs-sms
 
 SMS notifications for WHMCS, sent over Ruach Networks' direct carrier routes. The module is free; you need a Ruach SMS account to send messages.
 
@@ -29,7 +29,7 @@ Full documentation: https://docs.ruachnet.com/whmcs-sms · Support: support@ruac
 1. Upload `modules/addons/ruach_sms` to `<your WHMCS>/modules/addons/`.
 2. Go to **System Settings → Addon Modules**, find **Ruach SMS for WHMCS** and click **Activate**.
 3. Click **Configure**:
-   - enter your **API Key**, **Client ID** and **Sender ID**
+   - enter your **API Key**, **Client ID** and **Sender ID (transactional)**, plus a **Sender ID (promotional)** if your destinations route promotional traffic separately
    - set **Countries** (default `NG`), **Expiry reminder days** (default `7,3,1`) and the sending hours
    - optionally set a **Low credit alert** amount
    - tick the admin roles that may use the module under **Access Control**
@@ -41,6 +41,7 @@ Full documentation: https://docs.ruachnet.com/whmcs-sms · Support: support@ruac
 ## How it behaves
 
 - **Sending hours:** invoice, overdue, reminder and suspension messages wait for your sending hours (server time). Payment and reactivation messages go out immediately.
+- **Transactional and promotional:** each template is Transactional or Promotional (editable). Set a promotional Sender ID to send promotional templates from it, or leave it blank to use one Sender ID for everything. Promotional messages can have their own sending hours and can be limited to clients opted in to marketing. The log shows the category and Sender ID of every message.
 - **No duplicates:** each notification has a unique key, so hooks firing twice or overlapping cron runs never send the same SMS twice.
 - **Retries:** failed sends are retried up to 3 times within 2 days. Queued messages older than 2 days expire rather than arrive late.
 - **Delivery reports:** each sent message is checked for up to 3 days and shown as Delivered, Undelivered or Awaiting report.
@@ -51,6 +52,10 @@ Full documentation: https://docs.ruachnet.com/whmcs-sms · Support: support@ruac
 - **Credit balance:** shown on the Message log page, with an optional low-credit email to admins (at most once a day).
 - **Deactivating** keeps your templates, log and opt-outs, unless **Delete data on deactivate** is on.
 
+## Upgrading
+
+Upload the new `modules/addons/ruach_sms` folder over the old one, then open **System Settings → Addon Modules**. WHMCS runs the upgrade automatically; your settings, templates and log are kept.
+
 ## Data protection
 
 The module sends your clients' names, mobile numbers and billing details to Ruach to deliver messages. Ruach processes this data as your processor under its Data Processing Agreement: https://ruachnet.com/dpa
@@ -60,6 +65,8 @@ The module sends your clients' names, mobile numbers and billing details to Ruac
 Free to use with a Ruach SMS account. See `modules/addons/ruach_sms/LICENSE.txt`.
 
 ## Changelog
+
+**1.3.0**: Transactional and promotional Sender IDs, per-template category, promotional sending hours and marketing opt-in. Delivery times shown in server time. The Message log filter stays applied after Check, Retry and Refresh.
 
 **1.2.0**: First public release. Adds the "Delete data on deactivate" option.
 
