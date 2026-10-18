@@ -1,6 +1,6 @@
 # Ruach SMS for WHMCS
 
-Version 1.3.0 · Ruach Networks · https://ruachnet.com/whmcs-sms
+Version 1.3.1 · Ruach Networks · https://ruachnet.com/whmcs-sms
 
 SMS notifications for WHMCS, sent over Ruach Networks' direct carrier routes to mobile numbers in any country. The module is free; you need a Ruach SMS account to send messages.
 
@@ -66,6 +66,8 @@ The module sends your clients' names, mobile numbers and billing details to Ruac
 Free to use with a Ruach SMS account. See `modules/addons/ruach_sms/LICENSE.txt`.
 
 ## Changelog
+
+**1.3.1**: Plain **Publish** on a draft invoice now sends the invoice SMS straight away instead of at the next cron run. Messages logged during dry run are no longer sent when dry run is turned off.
 
 **1.3.0**: Transactional and promotional Sender IDs, per-template category, promotional sending hours and marketing opt-in. Delivery times shown in server time. The Message log filter stays applied after Check, Retry and Refresh.
 
